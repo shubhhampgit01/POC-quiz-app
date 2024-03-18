@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  align-self: center;
+}
+
+.stepContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.stepCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #cccccc; /* Change to your desired default color */
+  justify-content: center;
+  align-items: center;
+}
+
+.activeStepCircle {
+  background-color: #333333; /* Change to your desired active color */
+}
+
+.line {
+//   min-width: 72px;
+//   max-width: 72px;
+// flex-grow: 1;
+ width: 100%;
+  height: 1px;
+  background-color: #cccccc; /* Change to your desired default color */
+}
+
+.activeLine {
+  background-color: #333333; /* Change to your desired active color */
+}
+
+.activeStepText {
+  color: #ffffff; /* Change to your desired color */
+}

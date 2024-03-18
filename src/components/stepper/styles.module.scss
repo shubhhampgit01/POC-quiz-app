@@ -1,0 +1,63 @@
+@import "../../constants/colors.scss";
+
+.main_container {
+  // @extend .flex_between;
+  display: flex;
+  align-items: center;
+  margin: 0 22px;
+  box-sizing: border-box;
+}
+
+.display_steps_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+
+  &:last-child {
+    justify-content: start;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+.number_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $lightGray;
+//   border: 1px solid $lightGray;
+  cursor: pointer;
+}
+
+.description_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  margin-top: 52px;
+  width: 120px;
+}
+.line {
+  flex: 1;
+  // max-width: 200px;
+  border-top: 5px solid $lightGray;
+}
+
+.check {
+  height: 16px;
+  width: 16px;
+  align-self: center;
+  border-radius: 50%;
+  background-color: $green;
+}

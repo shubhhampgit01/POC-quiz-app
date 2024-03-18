@@ -1,0 +1,82 @@
+@import "../../constants/colors.scss";
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primaryDark;
+  flex-direction: column;
+}
+
+.glass {
+  width: 30%;
+  height: 25%;
+  border-radius: 100%;
+  /* left: calc(50% - 372.95px / 2 - 76.53px);
+        top: calc(50% - 257.05px / 2 - 47.47px); */
+  background: linear-gradient(
+    123.77deg,
+    #be3144 -16.46%,
+    #f05941 59.04%,
+
+    #f8f8ff 124.53%
+  );
+  opacity: 0.5;
+  filter: blur(94px);
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.absolute {
+  position: absolute;
+  z-index: 0;
+}
+.quizText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quizText:hover .glass {
+  opacity: 0.9;
+}
+
+.title {
+  color: $white;
+  font-size: 50px;
+  z-index: 10;
+  transition-delay: 5s;
+  transition: all 3s ease-in 0.5s;
+  user-select: none;
+}
+
+.quizText:hover .title {
+  color: $gold;
+  text-shadow: 0 0 2px $gold, 0 0 5px $gold, 0 0 10px $gold;
+}
+
+.startbtn {
+  margin-top: 100px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.startbtn:hover {
+  color: #ffffff;
+  background: $secondaryOrange;
+  border: 1px solid $primaryOrange;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px $primaryOrange, 0 0 5px $primaryOrange,
+    0 0 50px $primaryOrange, 0 0 100px $primaryOrange;
+}

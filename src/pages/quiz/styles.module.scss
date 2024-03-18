@@ -1,0 +1,232 @@
+@import "../../constants/colors.scss";
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+ 
+  // background-image: linear-gradient(
+  //     to bottom,
+  //     rgba(0, 0, 0, 0.6),
+  //     rgba(34, 9, 44, 0.9)
+  //   ),
+  //   url("https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg");
+  background-size: cover; // Ensure the background image covers the entire container
+  background-position: center; // Center the background image
+  background-color: rgb(34, 9, 44);
+}
+
+.quizContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  @media (max-width: 970px) {
+    justify-content: center;
+  }
+
+  // justify-content: space-between;
+
+  .leftSide {
+    width: 50%;
+
+    @media (max-width: 970px) {
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .leftImage {
+      height: 100vh;
+      width: 100%;
+      border-top-right-radius: 970px;
+      border-bottom-right-radius: 970px;
+    }
+  }
+
+  .rightSide {
+    width: 50%;
+    padding-left: 50px;
+
+    @media (max-width: 970px) {
+      width: 100%;
+      padding-left: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.quizMain {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 40vh;
+  max-width: 60%;
+
+  @media (max-width: 970px) {
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottomQuiz {
+    margin-left: 25px;
+    z-index: 100;
+
+    @media (max-width: 970px) {
+      margin-left: 0px;
+    }
+  }
+
+  &:first-child {
+    justify-content: start;
+    // margin-left: -40px;
+  }
+
+  h1 {
+    color: $white;
+    margin-top: 60px;
+  }
+
+  .optionContainer {
+    display: grid;
+    z-index: 10;
+    color: $white;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    // width: 60%;
+    margin-top: 50px;
+
+    @media (max-width: 970px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
+
+    .singleOption {
+      background-color: rgba(0, 0, 0, 0.308);
+      padding: 10px;
+      padding-left: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.glass {
+  width: 40%;
+  height: 55%;
+
+  border-radius: 100%;
+  /* left: calc(50% - 372.95px / 2 - 76.53px);
+        top: calc(50% - 257.05px / 2 - 47.47px); */
+  background: linear-gradient(
+    123.77deg,
+    #be3144 -16.46%,
+    #f05941 59.04%,
+
+    #f8f8ff 124.53%
+  );
+  opacity: 0.4;
+  filter: blur(94px);
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.absolute {
+  position: absolute;
+  z-index: 1;
+}
+
+.singleOption:hover .tickMark {
+  background-color: rgba(0, 0, 0, 0.562);
+}
+
+.tickMark {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.btnContainer {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  // width: 60%;
+  align-items: center;
+}
+.backBtn {
+  display: flex;
+  color: $white;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.backBtn:hover .backArrow {
+  transform: translateX(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.selectedOption {
+  background-color: rgba(19, 233, 19, 0.548) !important;
+}
+
+.selectedTick {
+  background-color: rgba(19, 233, 19, 0.548) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qnProgress {
+  text-align: center;
+  // width: 60%;
+  font-size: 24px;
+  color: $white;
+}
+
+.bottomQuiz {
+  // max-width: 60%;
+}
+
+@media (max-width: 1500px) {
+  .quizMain {
+    max-width: 80%;
+  }
+}
+@media (max-width: 970px) {
+  .quizMain {
+    max-width: 90%;
+  }
+}
+
+.stepperContainer {
+  width: 117%;
+  z-index: 20;
+
+  @media (max-width: 970px) {
+    margin-left: 10%;
+  }
+  
+}
+
+.leftSide {
+  position: relative;
+}
+
+.gradientLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
